@@ -1,0 +1,10 @@
+try:
+    with open('sample.txt', 'r') as file:
+        print('Reading file content:')
+        line_number=1
+        for line in file:
+            print("Line " + str(line_number) + ": " + line, end='')
+            line_number = line_number + 1
+        file.close()
+except FileNotFoundError:
+    print("Error: the file 'sample.txt' was not found.")
